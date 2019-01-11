@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>761</width>
+    <height>847</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="Glowna_ramka">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>741</width>
+      <height>781</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="Widget_Pomiar">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>720</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QCheckBox" name="Pomiar_adc_check">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>130</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pomiar ADC</string>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcd_pomiar">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>40</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Label_wartosc_pomiar">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>10</y>
+        <width>131</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Wartosc pomiaru :</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_czestotliwosc_pomiar">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>40</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>1Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>50Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>100Hz</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="Label_Czestotliwosc_pomiaru">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>20</y>
+        <width>101</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Częstotliwość</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_kanal_pomiar">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>86</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pin 5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pin 6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pin 7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pin 8</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="Label_Kanal_pomiar">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>30</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kanał</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_Vref_pomiar">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>50</y>
+        <width>86</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>5V</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12V</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="Label_Vref_pomiar">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>30</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Vref</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="Widget_PWM1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>330</y>
+       <width>721</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QCheckBox" name="Generowanie_PWM1_check">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>211</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generowanie PWM 1</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider_wypelnienie_PWM1">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>110</y>
+        <width>441</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="tracking">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="invertedAppearance">
+       <bool>false</bool>
+      </property>
+      <property name="invertedControls">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_0slider_PWM1">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>140</y>
+        <width>21</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_100slider_PWM1">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>140</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>100%</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>130</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Wypełnienie</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Button_Aktualizacja_PWM1">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Aktualizacja</string>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcd_aktualny_na_pinie_PWM1">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>50</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcd_zadany_PWM1">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>50</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_akt_wyp_PWM1">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Aktualne wypełnienie % :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_wybrane_wyp_PWM1">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>20</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Wybrane wypełnienie % :</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_czestotliwosc_PWM1">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>1Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>50Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>100Hz</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="LABEL_TYTULPROGRAMU">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>0</y>
+       <width>281</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+       <italic>true</italic>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Program główny</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::AutoText</enum>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QFrame" name="Widget_diody5V">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>720</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QCheckBox" name="Kontrola_PIN5V_check">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>130</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PIN (0 - 5V)</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>10</y>
+        <width>561</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <item>
+        <widget class="QGroupBox" name="Grupa_dioda1">
+         <property name="title">
+          <string>Pin 1</string>
+         </property>
+         <widget class="QRadioButton" name="Button_ON_P1">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>30</y>
+            <width>112</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>On</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="Button_OFF_P1">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>30</y>
+            <width>112</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Off</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="Grupa_dioda2">
+         <property name="title">
+          <string>Pin 2</string>
+         </property>
+         <widget class="QRadioButton" name="Button_ON_P2">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>30</y>
+            <width>112</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>On</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="Button_OFF_P2">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>30</y>
+            <width>112</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Off</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="Widget_PWM_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>500</y>
+       <width>721</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QCheckBox" name="Generowanie_PWM2_check">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>211</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Generowanie PWM 2</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="Slider_wypelnienie_PWM2">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>110</y>
+        <width>441</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>100</number>
+      </property>
+      <property name="tracking">
+       <bool>false</bool>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="invertedAppearance">
+       <bool>false</bool>
+      </property>
+      <property name="invertedControls">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_akt_wyp_PWM2_2">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>140</y>
+        <width>21</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0%</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_100slider_PWM2">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>140</y>
+        <width>51</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>100%</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>130</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Wypełnienie</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Button_Aktualizacja_PWM2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Aktualizacja</string>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcd_aktualny_na_pinie_PWM2">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>50</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcd_zadany_PWM2">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>50</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_akt_wyp_PWM2">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Aktualne wypełnienie % :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_wybrane_wyp_PWM2">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>20</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Wybrane wypełnienie % :</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_czestotliwosc_PWM2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>1Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>20Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>50Hz</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>100Hz</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="Widget_diody_12V">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>720</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QCheckBox" name="Kontrola_PIN12V_check">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>130</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PIN (0 - 12V)</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>10</y>
+        <width>561</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_13">
+       <item>
+        <widget class="QGroupBox" name="Grupa_dioda2_3">
+         <property name="title">
+          <string>Pin 3</string>
+         </property>
+         <widget class="QRadioButton" name="Button_ON_P3">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>30</y>
+            <width>112</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>On</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="Button_OFF_P3">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>30</y>
+            <width>112</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Off</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="Grupa_dioda2_2">
+         <property name="title">
+          <string>Pin 4</string>
+         </property>
+         <widget class="QRadioButton" name="Button_ON_P4">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>30</y>
+            <width>112</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>On</string>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="Button_OFF_P4">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>30</y>
+            <width>112</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Off</string>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="Widget_predkosc_obrotowa">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>670</y>
+       <width>721</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QCheckBox" name="Pomiar_pr_obrotowej">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>211</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pomiar prędkości obrotowej</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="Label_wartosc_pr_obrt">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>10</y>
+        <width>141</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Prędkość [obr/min] :</string>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcd_pomiar_pr_obrt">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>30</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_kanal_pr_pomiar">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>30</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>Pin 11</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pin 12</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>761</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
