@@ -1,4 +1,4 @@
-# inz
+# QtGUI + Atmega
 
 Program do obslugi atmegi zawierajacy GUI 
 
